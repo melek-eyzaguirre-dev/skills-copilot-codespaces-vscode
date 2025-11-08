@@ -125,11 +125,13 @@ if __name__ == "__main__":
     print(f"  invalid.email: {validate_email('invalid.email')}")
     
     # Test password validation
+    # NOTE: In production, never log or print passwords!
+    # These are demo values for educational purposes only.
     print("\nPassword Validation:")
     weak_password = "password"
     strong_password = "SecurePass123!"
-    print(f"  '{weak_password}': {validate_password(weak_password)}")
-    print(f"  '{strong_password}': {validate_password(strong_password)}")
+    print(f"  Weak password strength: {validate_password(weak_password)}")
+    print(f"  Strong password strength: {validate_password(strong_password)}")
     
     # Test complete user validation
     print("\nComplete User Validation:")
