@@ -130,8 +130,12 @@ if __name__ == "__main__":
     print("\nPassword Validation:")
     weak_password = "password"
     strong_password = "SecurePass123!"
-    print(f"  Weak password strength: {validate_password(weak_password)}")
-    print(f"  Strong password strength: {validate_password(strong_password)}")
+    weak_checks = validate_password(weak_password)
+    strong_checks = validate_password(strong_password)
+    print(f"  Weak password strength: {weak_checks}")
+    print(f"  Strong password strength: {strong_checks}")
+    print(f"  Weak password is strong: {is_password_strong(weak_password)}")
+    print(f"  Strong password is strong: {is_password_strong(strong_password)}")
     
     # Test complete user validation
     print("\nComplete User Validation:")
